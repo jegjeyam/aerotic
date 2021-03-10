@@ -1,0 +1,6 @@
+---
+applications:
+- name: aerotic
+  memory: 256M
+  host: aerotic
+  domain: eu-gb.mybluemix.net

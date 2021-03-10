@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AEROTIC::RENEWAL OF SLD FITMENT CERTIFICATE</title>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.-->
+<script>var __adobewebfontsappname__="dreamweaver"</script>
+<script src="http://use.edgefonts.net/source-sans-pro:n2:default.js" type="text/javascript"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"> </script>
+<script src="js/bootstrap.js"> </script>
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<script language="javascript" type="text/javascript">
+
+function ValidateDate(dtValue) {
+  //var dtValue = $('#txtEnteredStartDate').val();
+  var dtRegex = new RegExp("^([0]?[1-9]|[1-2]\\d|3[0-1])-(JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC)-[1-2]\\d{3}$", 'i');
+  return dtRegex.test(dtValue);
+}
+
+function submitFrm() {
+
+  $('#red_c_date').html("");
+  
+  dtVal=$('#invdate').val()
+  
+  if (ValidateDate(dtVal) == false) {
+    $('#red_invdate').html("Please enter date in dd-mmm-yyyy format<br>");
+    return;
+  } else {
+    $('#red_invdate').html("");
+  }
+  
+     dtVal=$('#c_date').val()
+	
+  if (ValidateDate(dtVal) == false) {
+    $('#red_c_date').html("Please enter date in dd-mmm-yyyy format<br>");
+    return;
+  } else {
+    $('#red_c_date').html("");
+  }
+  
+  
+  $("#frm").submit();
+}
+
+</script>
+							
+
+<style>
+.red {
+	font-size: 9px;
+	color: #CC0000;
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+	
+}
+.button {
+	width: 200px;
+	margin-top: 40px;
+	margin-right: auto;
+	margin-bottom: auto;
+	margin-left: auto;
+	padding-top: 5px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+	padding-left: 5px;
+	text-align: center;
+	vertical-align: middle;
+	border-radius: 10px;
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: 2px;
+	border: 3px solid #FFFFFF;
+	color: #010710;
+	transition: all 0.3s linear;
+}
+.button:hover {
+	background-color: #FEFEFE;
+	color: #C4C4C4;
+	cursor: pointer;
+}
+</style>
+<!-- Main Container -->
+<div class="container" style="text-align: center"> 
+  <!-- Navigation -->
+  <header> 
+    <div align="right" ><img src="/img/l1.jpg" alt="Related image" onload="typeof google==='object'&amp;&amp;google.aft&amp;&amp;google.aft(this)" width="60" height="60">&nbsp;&nbsp; 
+    </div>
+  </header>
+<!-- About Section -->
+  <!-- Stats Gallery Section -->
+  <!-- Parallax Section -->
+  <!-- More Info Section -->
+  <section class="footer_banner" id="contact">
+    
+	  <p class="hero_header"><strong>RENEWAL OF SLD FITMENT CERTIFICATE</strong></p>
+	  <% if (role =='admin' || cert>0) { %> 
+	  <form id="frm" method="post" action="/cert" target="_blank">
+		  <table cellpadding="2" cellspacing="2" align="center" border="0">
+			  <tr class="input"><td>Make/Model</td><td><input type="text" name="make" maxlength=25></td><td>Model</td><td><input type="text"  name="model" maxlength=25></td></tr>
+			  <tr class="input"><td>RC No.</td><td><input type="text" name='rc' maxlength=25></td><td>Set Speed</td><td><input type="text" name='speed' maxlength=25></td></tr>
+			  <tr class="input"><td>Invoice No.</td><td><input type="text" name='inv' maxlength=25></td>
+			  <td>Invoice Date.</td><td><span class=red id=red_invdate></span><input type="text" id=invdate name="invdate" maxlength=11></td></tr>
+			  <tr class="input"><td>Chassis No.</td><td><input type="text" name="chassis" maxlength=25></td><td>Engine No.</td><td><input type="text" name="engine"></td></tr>
+			  <tr class="input"><td>Kilometers.</td><td><input type="text" name="km"></td><td>Maker/Brand .</td><td><input type="text" name='m_brand' maxlength=25></td></tr>
+			  
+			  <tr class="input"><td>SL.No</td><td><input type="text" name='sl_no' maxlength=25></td><td>Calibration Date.</td><td><span class=red id=red_c_date></span>
+			  <input type="text" id="c_date" name="c_date" maxlength=11></td></tr>
+			  <tr class="input"><td>Calibrated at</td><td><input type="text" name='c_at' maxlength=25></td><td>Calibrated By</td><td><input type="text" name='c_by' maxlength=25></td></tr>
+			  <tr class="input"><td>Customer Name</td><td><input type="text" name='cust_name' maxlength=25></td><td>Customer Address</td><td><input type="text" name='cust_addr' maxlength=100></td></tr>
+			  <tr class="input"><td>Dealer/Partner</td><td><input type="text" name='dealer' maxlength=25></td><td>Address</td><td><input type="text" name='addr' maxlength=100></td></tr>
+		  </table>
+	  </form>
+	  <br>
+    <span class="button" onClick="javascript:submitFrm()">submit</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="button" onclick="window.location.href='/'"">cancel</span>
+    <% } else { %> 
+    <br><br><br>
+		  <span style="color: #ff0000;text-align: center;"> Operation Not allowed  </span>
+		  <br><br>
+		  <% } %> 
+  </section>
+  <!-- Footer Section -->
+  <!-- Copyrights Section -->
+  <div class="copyright"><strong>AEROTIC INDIA PVT LTD</strong>
+	<br>
+<span class="copyright1">(ISO 9001 : 2015 Company)</span></div>
+</div>
+<!-- Main Container Ends -->
+</body>
+</html>
