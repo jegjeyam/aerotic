@@ -3,6 +3,7 @@ request = require('request'),
 dateFormat = require('dateformat'),
 QRCode = require('qrcode');
 
+
 exports.printCert = function (req, res,cloudant_url,imgTxt,img1,img2,img3){
 	var cloudant = Cloudant({url: cloudant_url});
 	var email=req.session["email"]
